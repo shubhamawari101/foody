@@ -21,6 +21,8 @@ export default function CartPanel({ cart, onUpdateQty, onRemove, onClear }) {
   };
 
   const handleHoldOrder = () => {
+    if (cart.length === 0) return;
+    alert('Order held! The cart has been cleared.');
     onClear();
     setDiscount('');
   };
